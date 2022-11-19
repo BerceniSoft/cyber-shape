@@ -8,6 +8,7 @@ namespace Projectiles
         public int Damage { get; private set; } = 100;
         public Transform gapTransform;
         public bool QueuedForShooting { get; set; } = false;
+        public Sprite icon;
 
         private Bullet _bullet;
 
