@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Constants;
 using Projectiles;
 using UI;
@@ -12,7 +13,10 @@ public class Player : MonoBehaviour
 
     [field: SerializeField] public bool IsRhythmActive { get; private set; } = true;
 
-
+    [field: SerializeField]
+    public List<Projectile>
+        AvailableProjectiles { get; private set; } = new();
+    
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private HudManager ui;
     [SerializeField] private float pityTime = 0.13f;
