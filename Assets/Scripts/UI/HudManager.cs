@@ -22,7 +22,8 @@ namespace UI
         private const string BulletIconName = "Bullet";
         private const string SelectBulletTrigger = "SelectBullet";
         private const int BulletUiSize = 50;
-        private const int BulletUiMargin = 10;
+        private const int BulletUiMargin = 30;
+        private const int BulletSelectedUiExtraOffset = 20;
 
         private int _selectedBulletIndex = -1;
 
@@ -86,6 +87,22 @@ namespace UI
             var animator = bulletUi.GetComponent<Animator>();
             animator.SetBool(SelectBulletTriggerHash, true);
             _selectedBulletIndex = index;
+            UpdateBulletPositions(index);
+        }
+
+        private void UpdateBulletPositions(int selectedBulletIndex)
+        {
+            for(var i = 0; i < Bullets.Count; i++)
+            {
+                var bulletUi = _bulletUiList[i];
+                var bulletUiRectTransform = bulletUi.GetComponent<RectTransform>();
+                var leftOffset = BulletUiSize * i + BulletUiMargin * i;
+                if (i > selectedBulletIndex)
+                {
+                    leftOffset += BulletSelectedUiExtraOffset;
+                }
+                bulletUiRectTransform.anchoredPosition = new Vector2(leftOffset, 0);
+            }
         }
     }
 }

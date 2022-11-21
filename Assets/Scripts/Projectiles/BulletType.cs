@@ -7,10 +7,11 @@ namespace Projectiles
     {
         public enum BulletTypes
         {
-            NORMAL,
-            EXPLOSIVE,
-            PIERCING,
-            BOOMERANG
+            ARROW,
+            DART,
+            GRENADE,
+            BULLET,
+            SPEAR
         }
 
         public Sprite sprite;
