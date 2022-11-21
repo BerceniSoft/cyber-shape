@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4504203070504933a7e4d916d02f950c, type: 3}
   m_Name: Spear
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  bulletType: 0
+  sprite: {fileID: 21300000, guid: a2f5cc771eeaf4ff58a4a93cab62a9cc, type: 3}
+  bulletType: 4
