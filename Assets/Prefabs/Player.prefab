@@ -165,9 +165,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d20d4fd45c08374abcdd4972dfa4d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_health: 4
-  max_health: 4
+  <CurrentHealth>k__BackingField: 4
+  <MaxHealth>k__BackingField: 4
+  <IsRhythmActive>k__BackingField: 1
+  <AvailableBullets>k__BackingField:
+  - {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
+  <CurrentBullet>k__BackingField: {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
   speed: 12
+  ui: {fileID: 0}
 --- !u!114 &996477931859293465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +188,9 @@ MonoBehaviour:
   projectileCount: 6
   radius: 2
   projectilePrefab: {fileID: 9139162334264945893, guid: 9087362fdde8344518f1adea2daedb69, type: 3}
+  orbitSpeed: 10
+  orbitShootingSpeed: 25
+  launchDistanceThreshold: 0.5
 --- !u!114 &6163434126350315386
 MonoBehaviour:
   m_ObjectHideFlags: 0

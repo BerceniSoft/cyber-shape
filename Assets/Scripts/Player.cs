@@ -13,9 +13,12 @@ public class Player : MonoBehaviour
     [field: SerializeField] public bool IsRhythmActive { get; private set; } = true;
 
     [field: SerializeField]
-    public List<Projectile>
-        AvailableProjectiles { get; private set; } = new();
-    
+    public List<BulletType>
+        AvailableBullets { get; private set; } = new();
+
+    [field: SerializeField]
+    public BulletType CurrentBullet { get; set; }
+
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private HudManager ui;
 

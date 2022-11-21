@@ -220,6 +220,8 @@ MonoBehaviour:
   constEnemies: 1
   maxWidth: 10
   maxDistance: 7
+  secondsTillSpawn: 3
+  percentToNextWave: 0.75
 --- !u!114 &12744624317710529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +529,14 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 12744625466207067}
+    - target: {fileID: 996477931859293466, guid: 77c27b5a5fe3c4ff488ce2edc8959141, type: 3}
+      propertyPath: <AvailableBullets>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 996477931859293466, guid: 77c27b5a5fe3c4ff488ce2edc8959141, type: 3}
+      propertyPath: <AvailableBullets>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
     - target: {fileID: 3544394890068779010, guid: 77c27b5a5fe3c4ff488ce2edc8959141, type: 3}
       propertyPath: m_Name
       value: Player
@@ -620,6 +630,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 12744624317710556}
     m_Modifications:
+    - target: {fileID: 7994390254941613634, guid: c68163b566467484c9688ae1584afb55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994390254941613634, guid: c68163b566467484c9688ae1584afb55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9204221220915684625, guid: c68163b566467484c9688ae1584afb55, type: 3}
       propertyPath: player
       value: 
@@ -716,6 +734,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 9204221221743950188, guid: c68163b566467484c9688ae1584afb55, type: 3}
+      propertyPath: <Player>k__BackingField
+      value: 
+      objectReference: {fileID: 2986908248243961111}
+    - target: {fileID: 9204221221743950188, guid: c68163b566467484c9688ae1584afb55, type: 3}
+      propertyPath: <BulletUiPrefab>k__BackingField
+      value: 
+      objectReference: {fileID: 8572785308964836563, guid: ca0c389115e194a3fb08ccc3d4e80ca2, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c68163b566467484c9688ae1584afb55, type: 3}
