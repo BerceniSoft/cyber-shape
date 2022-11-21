@@ -148,6 +148,9 @@ MonoBehaviour:
   <CurrentHealth>k__BackingField: 4
   <MaxHealth>k__BackingField: 4
   <IsRhythmActive>k__BackingField: 1
+  <AvailableBullets>k__BackingField:
+  - {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
+  <CurrentBullet>k__BackingField: {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
   speed: 12
   ui: {fileID: 0}
   pityTime: 0.135
