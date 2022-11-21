@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4504203070504933a7e4d916d02f950c, type: 3}
   m_Name: Arrow
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 71c45f80bffdb9145ad2c456254c862e, type: 3}
+  sprite: {fileID: 21300000, guid: 4c55e3e5c7ef440d689af93eaafd94d7, type: 3}
   bulletType: 0

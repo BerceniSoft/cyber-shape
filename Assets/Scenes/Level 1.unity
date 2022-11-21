@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17307952, g: 0.21632008, b: 0.29832444, a: 1}
+  m_IndirectSpecularColor: {r: 0.173079, g: 0.21631923, b: 0.29832268, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -759,6 +759,18 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 9139162334264945893, guid: c536d954dcd320d4a89df82633e3402d, type: 3}
+    - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
+      propertyPath: <AvailableBullets>k__BackingField.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
+      propertyPath: <AvailableBullets>k__BackingField.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 77ff25d58ccf34aeab600974fbf652c2, type: 2}
+    - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
+      propertyPath: <AvailableBullets>k__BackingField.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b9d746e74638481280040505dd07240, type: 2}
     - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: <MaxHealth>k__BackingField
       value: 4
