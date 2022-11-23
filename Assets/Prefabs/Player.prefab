@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 996477931859293466}
   - component: {fileID: 996477931859293465}
   - component: {fileID: 6163434126350315386}
+  - component: {fileID: 7102787153375811402}
   - component: {fileID: -5817902969008648074}
   m_Layer: 6
   m_Name: Player
@@ -147,11 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CurrentHealth>k__BackingField: 4
   <MaxHealth>k__BackingField: 4
-  <IsRhythmActive>k__BackingField: 1
   <AvailableBullets>k__BackingField:
   - {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
   <CurrentBullet>k__BackingField: {fileID: 11400000, guid: 905472c42630e43e9bbbd648e9d6e1d3, type: 2}
-  speed: 12
   ui: {fileID: 0}
   pityTime: 0.135
 --- !u!114 &996477931859293465
@@ -185,6 +184,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Stage>k__BackingField: {fileID: 0}
+--- !u!114 &7102787153375811402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544394890068779010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f9386cf2ef452785e48134675aa744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  <IsRhythmActive>k__BackingField: 1
 --- !u!95 &-5817902969008648074
 Animator:
   serializedVersion: 4

@@ -92,15 +92,12 @@ namespace UI
 
         private void UpdateBulletPositions(int selectedBulletIndex)
         {
-            for(var i = 0; i < Bullets.Count; i++)
+            for (var i = 0; i < Bullets.Count; i++)
             {
                 var bulletUi = _bulletUiList[i];
                 var bulletUiRectTransform = bulletUi.GetComponent<RectTransform>();
-                var leftOffset = BulletUiSize * i + BulletUiMargin * i;
-                if (i > selectedBulletIndex)
-                {
-                    leftOffset += BulletSelectedUiExtraOffset;
-                }
+                var leftOffset = BulletUiSize * i + BulletUiMargin * i +
+                                 BulletSelectedUiExtraOffset * (Math.Max(i - selectedBulletIndex + 1, 0));
                 bulletUiRectTransform.anchoredPosition = new Vector2(leftOffset, 0);
             }
         }

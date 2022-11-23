@@ -10,9 +10,6 @@ public class Player : MonoBehaviour
 {
     [field: SerializeField] public int CurrentHealth { get; private set; } = 4;
     [field: SerializeField] public int MaxHealth { get; private set; } = 4;
-
-    [field: SerializeField] public bool IsRhythmActive { get; private set; } = true;
-
     [field: SerializeField]
     public List<BulletType>
         AvailableBullets { get; private set; } = new();
@@ -20,7 +17,6 @@ public class Player : MonoBehaviour
     [field: SerializeField]
     public BulletType CurrentBullet { get; set; }
 
-    [SerializeField] private float speed = 5.0f;
     [SerializeField] private HudManager ui;
     [SerializeField] private float pityTime = 0.13f;
     [SerializeField] private int scoreEvolve = 5;
@@ -72,8 +68,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        HandleShootInput();
-        MovementControl();
         CheckStatus();
     }
 
