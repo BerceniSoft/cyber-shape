@@ -761,7 +761,7 @@ PrefabInstance:
       objectReference: {fileID: 9139162334264945893, guid: c536d954dcd320d4a89df82633e3402d, type: 3}
     - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: <AvailableBullets>k__BackingField.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: <AvailableBullets>k__BackingField.Array.data[1]
