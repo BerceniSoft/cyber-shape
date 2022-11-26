@@ -16,5 +16,6 @@ namespace Projectiles
 
         public Sprite sprite;
         public BulletTypes bulletType;
+        public Mesh mesh;
     }
 }

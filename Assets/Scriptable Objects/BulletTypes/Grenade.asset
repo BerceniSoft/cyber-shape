@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 9b2c7a356f9a345d8971dbe39f77a523, type: 3}
   bulletType: 2
+  mesh: {fileID: 4300000, guid: 377c635e6ac08e6419ccdc298b66e44b, type: 3}

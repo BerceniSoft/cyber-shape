@@ -726,7 +726,7 @@ PrefabInstance:
     - target: {fileID: 2986908248243961108, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: projectilePrefab
       value: 
-      objectReference: {fileID: 9139162334264945893, guid: c536d954dcd320d4a89df82633e3402d, type: 3}
+      objectReference: {fileID: 9139162334264945893, guid: d4c7d4c2893db4443b3a9ab35f977fc0, type: 3}
     - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: <AvailableBullets>k__BackingField.Array.size
       value: 1
@@ -734,11 +734,11 @@ PrefabInstance:
     - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: <AvailableBullets>k__BackingField.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 77ff25d58ccf34aeab600974fbf652c2, type: 2}
+      objectReference: {fileID: 11400000, guid: 2dc5013f6011348ce9873fdabd751c6b, type: 2}
     - target: {fileID: 2986908248243961111, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
       propertyPath: <AvailableBullets>k__BackingField.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 6b9d746e74638481280040505dd07240, type: 2}
+      objectReference: {fileID: 11400000, guid: f9a8cf6d236504294b9d055e487f6904, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 12744624317710556, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}

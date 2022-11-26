@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
@@ -20,6 +21,13 @@ namespace Projectiles
         private Vector3 _prevPlayerPos;
         private readonly List<Projectile> _projectiles = new();
         private readonly List<ShootingInfo> _shootingQueue = new();
+        private readonly List<MeshFilter> _projectileMeshFilters = new();
+        private readonly List<Animator> _projectileAnimator = new();
+
+        private static readonly string SHideBulletTrigger = "Hide";
+        private static readonly string SRevealBulletTrigger = "Show";
+        private static readonly string SHideBulletAnimationName = "HideAnimation";
+        private static readonly string SRevealBulletAnimationName = "Reveal";
 
 
         private void Start()
@@ -41,7 +49,45 @@ namespace Projectiles
                     Quaternion.Euler(90, -i * 360 / projectileCount, 0)
                 );
                 _projectiles.Add(projectile);
+                _projectileMeshFilters.Add(
+                    projectileObj.GetComponentInChildren<MeshFilter>()
+                );
+                _projectileAnimator.Add(projectileObj.GetComponent<Animator>());
             }
+        }
+
+        public IEnumerator ChangeBullet(BulletType bulletType, Action then)
+        {
+            foreach (var animator in _projectileAnimator)
+            {
+                animator.SetTrigger(SHideBulletTrigger);
+            }
+
+            yield return new WaitUntil(() => IsAnimationComplete(SHideBulletAnimationName));
+
+            foreach (var meshFilter in _projectileMeshFilters)
+            {
+                meshFilter.mesh = bulletType.mesh;
+            }
+
+            foreach (var animator in _projectileAnimator)
+            {
+                animator.SetTrigger(SRevealBulletTrigger);
+            }
+
+            then?.Invoke();
+
+            yield return null;
+        }
+
+        private bool IsAnimationComplete(string animationName)
+        {
+            return !_projectileAnimator.Exists(animator =>
+                {
+                    var animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+                    return !animatorStateInfo.IsName(animationName) || animatorStateInfo.normalizedTime < 1;
+                }
+            );
         }
 
         private void FixedUpdate()
@@ -108,7 +154,7 @@ namespace Projectiles
                 {
                     minDistance = distance;
                     projectileIndex = i;
-                }   
+                }
             }
 
             return projectileIndex;

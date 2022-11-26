@@ -45,6 +45,11 @@ public class InputController : MonoBehaviour
 
     private void HandleShootInput()
     {
+        if (_player.CanShoot == false)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown("Fire1") && (_rTimer.CheckTime(0.10f) || !IsRhythmActive))
         {
             // Cast a ray from the camera to see where the click intersects with the floor
@@ -58,6 +63,7 @@ public class InputController : MonoBehaviour
 
     private void HandleChangeBullet()
     {
+        BulletType newBullet = null;
         if (Input.GetKeyDown(SPrevBulletKey))
         {
             var currentBulletIndex = _player.AvailableBullets.FindIndex(
@@ -65,9 +71,7 @@ public class InputController : MonoBehaviour
             );
 
             if (currentBulletIndex - 1 < 0) return;
-
-            var newBullet = _player.AvailableBullets[currentBulletIndex - 1];
-            _player.CurrentBullet = newBullet;
+            newBullet = _player.AvailableBullets[currentBulletIndex - 1];
         }
 
         if (Input.GetKeyDown(SNextBulletKey))
@@ -77,9 +81,12 @@ public class InputController : MonoBehaviour
             );
 
             if (currentBulletIndex + 1 > _player.AvailableBullets.Count) return;
-
-            var newBullet = _player.AvailableBullets[currentBulletIndex + 1];
-            _player.CurrentBullet = newBullet;
+            newBullet = _player.AvailableBullets[currentBulletIndex + 1];
+        }
+        
+        if(newBullet != null)
+        {
+            _player.SetBullet(newBullet);
         }
     }
 }
