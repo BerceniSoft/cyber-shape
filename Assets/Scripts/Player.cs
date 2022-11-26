@@ -78,4 +78,9 @@ public class Player : MonoBehaviour
                 () => this.CanShoot = true)
             );
     }
+
+    public void AddBullet(BulletType bulletType)
+    {
+        this.AvailableBullets.Add(bulletType);
+    }
 }
