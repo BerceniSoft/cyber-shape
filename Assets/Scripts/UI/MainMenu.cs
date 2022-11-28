@@ -1,20 +1,16 @@
 using Constants;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 namespace UI
 {
-    public class GameOver : MonoBehaviour
+    public class MainMenu : MonoBehaviour
     {
         [SerializeField]
-        private TMP_Text scoreText;
-        [SerializeField]
         private GameObject backgroundMusic;
-
-        private void Start()
+        // Start is called before the first frame update
+        void Start()
         {
-            scoreText.text = "High Score: " + PlayerPrefs.GetInt(PlayerPrefsKeys.HighScore);
             if (PlayerPrefs.HasKey(PlayerPrefsKeys.MusicState))
             {
                 backgroundMusic.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat(PlayerPrefsKeys.MusicState);
@@ -24,23 +20,24 @@ namespace UI
                 PlayerPrefs.SetFloat(PlayerPrefsKeys.MusicState, 0.5f);
                 backgroundMusic.GetComponent<AudioSource>().volume = 0.5f;
             }
+            
         }
 
-        public void RestartLevel() 
+        public void Play() 
         {
-            if (PlayerPrefs.HasKey(PlayerPrefsKeys.CurrentScene)) 
+            if (PlayerPrefs.HasKey(PlayerPrefsKeys.CurrentScene) &&  PlayerPrefs.GetInt(PlayerPrefsKeys.CurrentScene) != (int) Scenes.MainMenuScene ) 
             {
                 SceneManager.LoadScene(PlayerPrefs.GetInt(PlayerPrefsKeys.CurrentScene));
             } 
             else 
             {
+                PlayerPrefs.SetInt(PlayerPrefsKeys.CurrentScene, (int) Scenes.Level1);
                 SceneManager.LoadScene((int) Scenes.Level1);
             }
         }
-
-        public void MainMenu()
+        public void GoToOptions()
         {
-            SceneManager.LoadScene((int) Scenes.MainMenuScene);
+            SceneManager.LoadScene((int) Scenes.OptionsMenu);
         }
         
         public void ExitGame()
@@ -48,4 +45,6 @@ namespace UI
             Application.Quit();
         }
     }
+
 }
+

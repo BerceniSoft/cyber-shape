@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.173079, g: 0.21631923, b: 0.29832268, a: 1}
+  m_IndirectSpecularColor: {r: 0.17307952, g: 0.21632008, b: 0.29832444, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -779,6 +779,10 @@ PrefabInstance:
       propertyPath: <AvailableBullets>k__BackingField.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: f9a8cf6d236504294b9d055e487f6904, type: 2}
+    - target: {fileID: 4976606346818771808, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 12744624317710556, guid: 202027c59e52e421ab0aafec69ab8e16, type: 3}
