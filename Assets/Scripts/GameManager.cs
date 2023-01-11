@@ -142,8 +142,8 @@ public class GameManager : MonoBehaviour
             }
             
             // check if the point is outside camera view
-            if (randomPosition.x - _playerPosition.x < _camera.orthographicSize ||
-                randomPosition.z - _playerPosition.z < _camera.orthographicSize * _camera.aspect)
+            if (Mathf.Abs(randomPosition.x - _playerPosition.x) < _camera.orthographicSize ||
+                Mathf.Abs(randomPosition.z - _playerPosition.z) < _camera.orthographicSize * _camera.aspect)
             {
                 continue;
             }
