@@ -7,7 +7,6 @@ namespace UI
 {
     public class MainMenu : MonoBehaviour
     {
-
         private Canvas _canvas;
         private GameObject _playButton;
         private GameObject _optionsButton;
@@ -15,9 +14,9 @@ namespace UI
         private GameObject _exitButton;
         private GameObject _instructionsPanel;
         private GameObject _exitInstructions;
+
         private void Start()
         {
-
             _canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             _playButton = _canvas.gameObject.transform.Find("PlayGame").gameObject;
             _optionsButton = _canvas.gameObject.transform.Find("Options").gameObject;
@@ -25,13 +24,15 @@ namespace UI
             _exitButton = _canvas.gameObject.transform.Find("Exit").gameObject;
             _instructionsPanel = _canvas.gameObject.transform.Find("InstructionsPanel").gameObject;
             _exitInstructions = _canvas.gameObject.transform.Find("ExitInstructions").gameObject;
-            
+
             PlayerPrefs.SetInt(PlayerPrefsKeys.GameMode, (int) GameMode.Classic);
-            if(!PlayerPrefs.HasKey(PlayerPrefsKeys.GameProgress))
-            {
-                PlayerPrefs.SetInt(PlayerPrefsKeys.GameProgress, 0);
-            }
+            // if (!PlayerPrefs.HasKey(PlayerPrefsKeys.GameProgress))
+            // {
+            //     PlayerPrefs.SetInt(PlayerPrefsKeys.GameProgress, 0);
+            // }
+            PlayerPrefs.SetInt(PlayerPrefsKeys.GameProgress, 100);
         }
+
         public void Play()
         {
             SceneManager.LoadScene((int) Scene.PlayMenu);
@@ -41,7 +42,7 @@ namespace UI
         {
             SceneManager.LoadScene((int) Scene.OptionsMenu);
         }
-        
+
         public void ExitGame()
         {
             Application.Quit();
@@ -53,7 +54,7 @@ namespace UI
             _optionsButton.gameObject.SetActive(false);
             _instructionsButton.gameObject.SetActive(false);
             _exitButton.gameObject.SetActive(false);
-            
+
             _instructionsPanel.gameObject.SetActive(true);
             _exitInstructions.gameObject.SetActive(true);
         }
@@ -62,7 +63,7 @@ namespace UI
         {
             _instructionsPanel.gameObject.SetActive(false);
             _exitInstructions.gameObject.SetActive(false);
-            
+
             _playButton.gameObject.SetActive(true);
             _optionsButton.gameObject.SetActive(true);
             _instructionsButton.gameObject.SetActive(true);
@@ -70,4 +71,3 @@ namespace UI
         }
     }
 }
-
