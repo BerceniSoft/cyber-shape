@@ -31,6 +31,7 @@ namespace UI
             //     PlayerPrefs.SetInt(PlayerPrefsKeys.GameProgress, 0);
             // }
             PlayerPrefs.SetInt(PlayerPrefsKeys.GameProgress, 100);
+            PlayerPrefs.SetInt(PlayerPrefsKeys.CurrentScene, (int) Scene.Level5);
         }
 
         public void Play()
